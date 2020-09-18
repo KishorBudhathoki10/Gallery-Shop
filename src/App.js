@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import { HashRouter, Route, Redirect, Switch } from "react-router-dom";
 
 import "./App.css";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
@@ -58,7 +58,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <NavigationBar
           isAuthenticated={isAuthenticated}
           userId={userId}
@@ -126,7 +126,7 @@ const App = () => {
 
           <Redirect to="/" />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
