@@ -62,12 +62,11 @@ const NavigationBar = ({
           }
         })
         .catch((err) => {
-          const arr = err.message.split(" ");
-          const statusCode = arr[arr.length - 1];
-
-          if (statusCode === "500") {
-            logout();
-          }
+          // const arr = err.message.split(" ");
+          // const statusCode = arr[arr.length - 1];
+          // if (statusCode === "500") {
+          //   logout();
+          // }
         });
     }
   }, [userId, setUser, token, setUserProfileImage]);
