@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Typography, Avatar } from "@material-ui/core";
 
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
@@ -68,7 +68,7 @@ const NavigationBar = ({
           // }
         });
     }
-  }, [userId, setUser, token, setUserProfileImage]);
+  }, [userId, setUser, token, setUserProfileImage, userProfileImage]);
 
   const showAvatarAccordingly = (avatarClass) => {
     if (user.profileImageUrl) {
@@ -82,6 +82,14 @@ const NavigationBar = ({
     );
   };
 
+  const styleActiveNavLink = {
+    color: "black",
+  };
+
+  const styleUserSpecificActiveNavLink = {
+    color: "#3b54f8",
+  };
+
   const showNavigationAccordingly = () => {
     if (isAuthenticated()) {
       let totalCartItems = 0;
@@ -92,38 +100,39 @@ const NavigationBar = ({
 
       return (
         <div className={classes.Links}>
-          <Link to="/">
+          <NavLink to="/" exact activeStyle={styleActiveNavLink}>
             <Typography variant="body1">Shop</Typography>
-          </Link>
+          </NavLink>
 
           <div className={classes.shoppingCart}>
-            <Link to="/cart">
+            <NavLink to="/cart" activeStyle={styleActiveNavLink}>
               <ShoppingCartIcon />
               <div className={classes.totalCartItems}>{totalCartItems}</div>
-            </Link>
+            </NavLink>
           </div>
 
-          <Link
+          <NavLink
             to="/user"
             onMouseEnter={() => setDisplayUserSpecificMenu(true)}
             onMouseLeave={() => setDisplayUserSpecificMenu(false)}
+            activeStyle={styleActiveNavLink}
           >
             {showAvatarAccordingly(classesMUI.medium)}
-          </Link>
+          </NavLink>
         </div>
       );
     } else {
       return (
         <div className={classes.Links}>
-          <Link to="/">
+          <NavLink to="/" exact activeStyle={styleActiveNavLink}>
             <Typography variant="body1">Shop</Typography>
-          </Link>
-          <Link to="/signup">
+          </NavLink>
+          <NavLink to="/signup" activeStyle={styleActiveNavLink}>
             <Typography variant="body1">Sign Up</Typography>
-          </Link>
-          <Link to="login">
+          </NavLink>
+          <NavLink to="login" activeStyle={styleActiveNavLink}>
             <Typography variant="body1">Log In</Typography>
-          </Link>
+          </NavLink>
         </div>
       );
     }
@@ -159,19 +168,36 @@ const NavigationBar = ({
 
           <div className={classes.userSpecificMenu__Main}>
             <div className={classes.userSpecificMenu__Main_Link}>
-              <Link to="/sellYourImage">Sell Your Image</Link>
+              <NavLink
+                to="/sellYourImage"
+                activeStyle={styleUserSpecificActiveNavLink}
+              >
+                Sell Your Image
+              </NavLink>
             </div>
 
             <div className={classes.userSpecificMenu__Main_Link}>
-              <Link to="/user/images">My Images</Link>
+              <NavLink
+                to="/user/images"
+                activeStyle={styleUserSpecificActiveNavLink}
+              >
+                My Images
+              </NavLink>
             </div>
 
             <div className={classes.userSpecificMenu__Main_Link}>
-              <Link to="/user/profile/image">Change Profile Image</Link>
+              <NavLink
+                to="/user/profile/image"
+                activeStyle={styleUserSpecificActiveNavLink}
+              >
+                Change Profile Image
+              </NavLink>
             </div>
 
             <div className={classes.userSpecificMenu__Main_Link}>
-              <Link to="/cart">My Cart</Link>
+              <NavLink to="/cart" activeStyle={styleUserSpecificActiveNavLink}>
+                My Cart
+              </NavLink>
             </div>
 
             <div className={classes.userSpecificMenu__Main_Link}>
