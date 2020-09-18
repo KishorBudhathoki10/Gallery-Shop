@@ -32,7 +32,8 @@ const ImageDetail = ({ userId, setUser, user, isAuthenticated, logout }) => {
   }, []);
 
   useEffect(() => {
-    const imageId = window.location.pathname.split("/")[2];
+    const url = window.location.href.split("/");
+    const imageId = url[url.length - 1];
 
     gallery
       .get(`/images/${imageId}`)

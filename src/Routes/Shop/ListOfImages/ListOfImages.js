@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-const ListOfItems = (props) => {
+const ListOfItems = () => {
   const classesMUI = useStyles();
 
   const [images, setImages] = useState([]);
@@ -42,7 +42,7 @@ const ListOfItems = (props) => {
     try {
       getImages();
     } catch (err) {}
-  }, [sortBy, minPrice, maxPrice, props.token]);
+  }, [sortBy, minPrice, maxPrice]);
 
   const toggleFilter = () => {
     setFilterVisible(!filterVisible);

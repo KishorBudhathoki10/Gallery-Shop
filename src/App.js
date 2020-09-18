@@ -58,7 +58,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <HashRouter>
+      <HashRouter basename="/">
         <NavigationBar
           isAuthenticated={isAuthenticated}
           userId={userId}

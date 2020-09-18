@@ -127,6 +127,7 @@ const NavigationBar = ({
           <NavLink to="/" exact activeStyle={styleActiveNavLink}>
             <Typography variant="body1">Shop</Typography>
           </NavLink>
+
           <NavLink to="/signup" activeStyle={styleActiveNavLink}>
             <Typography variant="body1">Sign Up</Typography>
           </NavLink>
