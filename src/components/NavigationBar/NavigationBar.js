@@ -45,7 +45,6 @@ const NavigationBar = ({
   const [displayUserSpecificMenu, setDisplayUserSpecificMenu] = useState(false);
 
   useEffect(() => {
-    console.log("sdasd");
     if (token && userId) {
       gallery
         .get(`/users/${userId}`, {
