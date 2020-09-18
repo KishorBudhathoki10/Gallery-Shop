@@ -1,0 +1,12 @@
+.linkTOLogin {
+  text-decoration: none;
+  color: #303fa0;
+}
+
+.error {
+  background-color: #f44336;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}

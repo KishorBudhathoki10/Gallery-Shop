@@ -1,0 +1,19 @@
+.ListOfItems {
+  margin: 0 auto;
+}
+
+.FilterContainer {
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .ListOfItems {
+    width: 90%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .ListOfItems {
+    width: 80%;
+  }
+}

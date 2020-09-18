@@ -1,0 +1,73 @@
+.Image {
+  display: inline-block;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.imageContainer {
+  /* height: 300px; */
+  background-color: #eff1f1;
+  padding: 1.2rem;
+  box-shadow: 5px 5px 10px black;
+  position: relative;
+  cursor: pointer;
+  /* border-radius: 4px; */
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.content {
+  margin-top: 1.5rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+@media (min-width: 600px) {
+  .Image {
+    width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .Image {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Image {
+    width: 25%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .Image {
+    width: 20%;
+  }
+}
+
+@media (min-width: 4000px) {
+  .Image {
+    width: 12.5%;
+  }
+}
+
+@media (min-width: 5000px) {
+  .Image {
+    width: 11.11%;
+  }
+}

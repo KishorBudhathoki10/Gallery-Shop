@@ -1,0 +1,122 @@
+.NavigationBar {
+  width: 100%;
+  /* padding: 1rem; */
+  background-color: #303fa0;
+}
+
+.Links {
+  text-align: right;
+}
+
+.Links a {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 4%;
+  /* color: rgb(2, 2, 51); */
+  padding: 0.8rem;
+  color: white;
+  vertical-align: middle;
+}
+
+.Links a:hover,
+.Links a:active {
+  color: #05071a;
+}
+
+.shoppingCart {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-right: 4%;
+}
+
+.totalCartItems {
+  position: absolute;
+  right: 2px;
+  top: 0;
+  z-index: 2;
+  background-color: red;
+  width: 18px;
+  text-align: center;
+  height: 18px;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.userSpecificMenu {
+  position: absolute;
+  background-color: white;
+  right: 1rem;
+  padding: 0;
+  border: 1px solid rgb(233, 232, 232);
+  width: 300px;
+}
+
+.userSpecificMenu__Header {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.userImage,
+.userInfo {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.userImage {
+  width: 25%;
+}
+
+.userInfo {
+  width: 70%;
+}
+
+.userName {
+  font-weight: 800;
+}
+
+.userName:hover,
+.userName:active {
+  color: #3b54f8;
+}
+
+.userEmail {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: rgb(85, 84, 84);
+}
+
+.userSpecificMenu {
+  z-index: 10;
+}
+
+.userSpecificMenu__Main {
+  padding-top: 1rem;
+}
+
+.userSpecificMenu__Main_Link {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.userSpecificMenu__Main_Link a {
+  text-decoration: none;
+  color: rgb(85, 84, 84);
+}
+
+.Logout {
+  display: inline-block;
+  margin-right: 4%;
+  color: rgb(85, 84, 84);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.userSpecificMenu__Main_Link a:hover,
+.userSpecificMenu__Main_Link a:active,
+.Logout:hover,
+.Logout:active {
+  color: #3b54f8;
+}

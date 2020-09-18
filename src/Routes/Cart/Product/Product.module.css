@@ -1,0 +1,56 @@
+.Product {
+  padding-top: 2rem;
+  margin: 2rem auto;
+  border-top: 1px solid #b9c2fc;
+  color: #303fa0;
+  position: relative;
+}
+
+.image,
+.content {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.content {
+  margin-left: 2rem;
+}
+
+.title {
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.stock {
+  font-size: 0.8rem;
+}
+
+.quantity {
+  background-color: #f59337;
+  color: white;
+  border-radius: 8px;
+  display: inline-block;
+  position: absolute;
+  bottom: 10px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 0.5rem;
+}
+
+.price {
+  position: absolute;
+  right: 0;
+  top: 2rem;
+}
+
+.price h2 {
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.price p {
+  font-size: 0.7rem;
+  text-align: right;
+  color: grey;
+}
