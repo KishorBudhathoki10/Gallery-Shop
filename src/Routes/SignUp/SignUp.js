@@ -98,6 +98,7 @@ const SignUp = (props) => {
         .min(2, "Minimum of 2 letters is required.")
         .required("Last Name is required"),
       email: Yup.string()
+        .trim()
         .email("Invalid email address.")
         .required("Email address is required"),
       password: Yup.string()

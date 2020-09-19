@@ -89,6 +89,7 @@ const LogIn = (props) => {
     },
     validationSchema: Yup.object({
       email: Yup.string()
+        .trim()
         .email("Invalid email address.")
         .required("Email address is required"),
       password: Yup.string().required("Password is required"),
