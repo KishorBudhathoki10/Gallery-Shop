@@ -115,6 +115,7 @@ const NavigationBar = ({
             to="/user"
             onMouseEnter={() => setDisplayUserSpecificMenu(true)}
             onMouseLeave={() => setDisplayUserSpecificMenu(false)}
+            onClick={() => setDisplayUserSpecificMenu(true)}
             activeStyle={styleActiveNavLink}
           >
             {showAvatarAccordingly(classesMUI.medium)}
