@@ -178,6 +178,7 @@ const NavigationBar = ({
               <NavLink
                 to="/sellYourImage"
                 activeStyle={styleUserSpecificActiveNavLink}
+                onClick={() => setDisplayUserSpecificMenu(false)}
               >
                 Sell Your Image
               </NavLink>
@@ -187,6 +188,7 @@ const NavigationBar = ({
               <NavLink
                 to="/user/images"
                 activeStyle={styleUserSpecificActiveNavLink}
+                onClick={() => setDisplayUserSpecificMenu(false)}
               >
                 My Images
               </NavLink>
@@ -196,13 +198,18 @@ const NavigationBar = ({
               <NavLink
                 to="/user/profile/image"
                 activeStyle={styleUserSpecificActiveNavLink}
+                onClick={() => setDisplayUserSpecificMenu(false)}
               >
                 Change Profile Image
               </NavLink>
             </div>
 
             <div className={classes.userSpecificMenu__Main_Link}>
-              <NavLink to="/cart" activeStyle={styleUserSpecificActiveNavLink}>
+              <NavLink
+                to="/cart"
+                activeStyle={styleUserSpecificActiveNavLink}
+                onClick={() => setDisplayUserSpecificMenu(false)}
+              >
                 My Cart
               </NavLink>
             </div>
