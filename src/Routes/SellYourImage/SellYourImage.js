@@ -184,7 +184,6 @@ const ProfileImageForm = ({ userId, token, setUserProfileImage, logout }) => {
                   fullWidth
                   id="title"
                   label="Title"
-                  autoFocus
                   required
                   error={anyError(formik.touched.title, formik.errors.title)}
                   helperText={formFieldError(
