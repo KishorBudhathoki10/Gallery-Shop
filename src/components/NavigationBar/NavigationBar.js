@@ -146,6 +146,11 @@ const NavigationBar = ({
     userName = user.firstName + " " + user.lastName;
   }
 
+  const onLogoutClick = () => {
+    logout();
+    setDisplayUserSpecificMenu(false);
+  };
+
   const displayOnHoverUserProfile = () => {
     if (displayUserSpecificMenu) {
       return (
@@ -203,7 +208,7 @@ const NavigationBar = ({
             </div>
 
             <div className={classes.userSpecificMenu__Main_Link}>
-              <button className={classes.Logout} onClick={logout}>
+              <button className={classes.Logout} onClick={onLogoutClick}>
                 Log Out
               </button>
             </div>
